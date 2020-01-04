@@ -5,21 +5,24 @@
   <title>Lean into the future</title>
   <script src="https://aframe.io/releases/1.0.0/aframe.min.js"></script>
   <script src="https://raw.githack.com/jeromeetienne/AR.js/1.7.5/aframe/build/aframe-ar.js"></script>
+  <script src="https://fariskassim.com/stage/rebel9/teaf/blob/v4/js/perlin.js"></script>
+  <script src="blob.js"></script>
 </head>
 <body style="margin : 0px; overflow: hidden;">
   <a-scene embedded arjs="detectionMode: mono_and_matrix; matrixCodeType: 3x3; debugUIEnabled: false;" vr-mode-ui="enabled: false">
     <a-marker type="barcode" value="12">
-    <!-- <a-marker-camera type="pattern" url="pattern-qrcode-white.patt"> -->
-      <a-entity id="sphere" geometry="primitive: sphere; radius: 1" material="color: #ffffff;" position="0 0.5 0" visible=""></a-entity>
+      <a-entity 
+        blob="width: 1; height: 128; depth: 128; color: #fff; speed: 0.001; spikes: 1.5" position="0 0 0"
+      ></a-entity>
       <a-entity id="magentaLight" light="type: point; intensity: 0.77; color: #f207ff;" position="7.67543 13.16473 -8.83224" visible=""></a-entity>
       <a-entity id="cyanLight" light="type: point; intensity: 0.5; color: #00fff3" position="-7.95295 12.79505 5.71929" visible=""></a-entity>
       <a-entity id="blueLight" light="type: point; intensity: 0.88; color: #0016ff;" position="7.39931 9.36727 6.97164" visible=""></a-entity>
       <a-entity id="greenLight" light="type: point; intensity: 0.44; color: #01ff00" position="-8.85877 9.16498 -6.58576" visible=""></a-entity>
       <!-- <a-entity id="border"
-          line__1="start: -3 0 -3; end: -3 0 3; color: #0EEE56"
-          line__2="start: -3 0 3; end: 3 0 3; color: #0EEE56"
-          line__3="start: 3 0 3; end: 3 0 -3; color: #0EEE56"
-          line__4="start: 3 0 -3; end: -3 0 -3; color: #0EEE56"
+          line__one="start: -3 0 -3; end: -3 0 3; color: #0EEE56"
+          line__two="start: -3 0 3; end: 3 0 3; color: #0EEE56"
+          line__three="start: 3 0 3; end: 3 0 -3; color: #0EEE56"
+          line__four="start: 3 0 -3; end: -3 0 -3; color: #0EEE56"
       ></a-entity> -->
       <!-- <a-plane rotation="-90 0 0" width="8" height="11.28" position="0 0 0" color="#1D006C"></a-plane> -->
     </a-marker>

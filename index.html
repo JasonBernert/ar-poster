@@ -5,10 +5,25 @@
   <title>Lean into the future</title>
   <script src="https://aframe.io/releases/1.0.3/aframe.min.js"></script>
   <script src="https://raw.githack.com/jeromeetienne/AR.js/2.1.4/aframe/build/aframe-ar.js"></script>
-  <!-- <script src='js/aframe-portal-door.js'></script> -->
-  <!-- <script src='js/threex-portal-door.js'></script> -->
+  <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.0.0/dist/aframe-extras.min.js"></script>
   <script src="https://fariskassim.com/stage/rebel9/teaf/blob/v4/js/perlin.js"></script>
   <script src="js/blob.js"></script>
+  <script>
+    AFRAME.registerComponent('modify-materials', {
+      init: function () {
+        // Wait for model to load.
+        this.el.addEventListener('model-loaded', () => {
+          // Grab the mesh / scene.
+          const obj = this.el.getObject3D('mesh');
+          // Go over the submeshes and modify materials we want.
+          obj.traverse(node => {
+            console.log(node)
+            // node.material.color.set('white');
+          });
+        });
+      }
+    });
+  </script>
 </head>
 <body style="margin : 0px; overflow: hidden;">
   <a-scene embedded arjs="detectionMode: mono_and_matrix; matrixCodeType: 3x3; debugUIEnabled: false;" vr-mode-ui="enabled: false">
@@ -39,7 +54,12 @@
       <a-asset-item id="robot" src="robot-hip-hop-dance.gltf"></a-asset-item>
     </a-assets>
     <a-marker type="barcode" value="0">
-      <a-entity gltf-model="#robot" modify-materials scale="0.25 0.25 0.25"></a-entity>
+      <a-entity 
+        gltf-model="#robot" 
+        scale="0.25 0.25 0.25"
+        animation-mixer="clip: *;"
+        material="shader: flat; color: red"
+      ></a-entity>
     </a-marker>
     <a-entity camera></a-entity>
   </a-scene>

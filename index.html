@@ -3,28 +3,37 @@
 <head>
   <meta charset="UTF-8">
   <title>Lean into the future</title>
-  <script src="https://aframe.io/releases/1.0.0/aframe.min.js"></script>
-  <script src="https://raw.githack.com/jeromeetienne/AR.js/1.7.5/aframe/build/aframe-ar.js"></script>
+  <script src="https://aframe.io/releases/1.0.3/aframe.min.js"></script>
+  <script src="https://raw.githack.com/jeromeetienne/AR.js/2.1.4/aframe/build/aframe-ar.js"></script>
+  <!-- <script src='js/aframe-portal-door.js'></script> -->
+  <!-- <script src='js/threex-portal-door.js'></script> -->
   <script src="https://fariskassim.com/stage/rebel9/teaf/blob/v4/js/perlin.js"></script>
-  <script src="blob.js"></script>
+  <script src="js/blob.js"></script>
 </head>
 <body style="margin : 0px; overflow: hidden;">
   <a-scene embedded arjs="detectionMode: mono_and_matrix; matrixCodeType: 3x3; debugUIEnabled: false;" vr-mode-ui="enabled: false">
     <a-marker type="barcode" value="12">
-      <a-entity 
-        blob="width: 1; height: 128; depth: 128; color: #fff; speed: 0.001; spikes: 1.5" position="0 0 0"
-      ></a-entity>
+      <!-- <a-portal-door url='images/360_topaz.png' position='0 0 0' scale='1 1 1' rotation='-90 0 0'><a-portal-door> -->
+      <a-entity blob="width: 1; height: 128; depth: 128; color: #fff; speed: 0.001; spikes: 1.5" scale="0.5 0.5 0.5" position="0 0.5 0"></a-entity>
       <a-entity id="magentaLight" light="type: point; intensity: 0.77; color: #f207ff;" position="7.67543 13.16473 -8.83224" visible=""></a-entity>
       <a-entity id="cyanLight" light="type: point; intensity: 0.5; color: #00fff3" position="-7.95295 12.79505 5.71929" visible=""></a-entity>
       <a-entity id="blueLight" light="type: point; intensity: 0.88; color: #0016ff;" position="7.39931 9.36727 6.97164" visible=""></a-entity>
       <a-entity id="greenLight" light="type: point; intensity: 0.44; color: #01ff00" position="-8.85877 9.16498 -6.58576" visible=""></a-entity>
-      <!-- <a-entity id="border"
-          line__one="start: -3 0 -3; end: -3 0 3; color: #0EEE56"
-          line__two="start: -3 0 3; end: 3 0 3; color: #0EEE56"
-          line__three="start: 3 0 3; end: 3 0 -3; color: #0EEE56"
-          line__four="start: 3 0 -3; end: -3 0 -3; color: #0EEE56"
-      ></a-entity> -->
-      <!-- <a-plane rotation="-90 0 0" width="8" height="11.28" position="0 0 0" color="#1D006C"></a-plane> -->
+      <a-entity id="border"
+          line__one="start: -0.5 0 -0.5; end: -0.5 0 0.5; color: #0EEE56"
+          line__two="start: -0.5 0 0.5; end: 0.5 0 0.5; color: #0EEE56"
+          line__three="start: 0.5 0 0.5; end: 0.5 0 -0.5; color: #0EEE56"
+          line__four="start: 0.5 0 -0.5; end: -0.5 0 -0.5; color: #0EEE56"
+      ></a-entity>
+      <!-- <a-text value="Lean" position="-0.5 0 -0.5" rotation="-90 0 0"></a-text>
+      <a-text value="into" position="0.5 0 -0.5" rotation="-90 0 0"></a-text>
+      <a-text value="the" position="-0.5 0 0.5" rotation="-90 0 0"></a-text>
+      <a-text value="future" position="0.5 0 0.5" rotation="-90 0 0"></a-text> -->
+      <!-- <a-plane rotation="-90 0 0" width="1" height="1" position="0 -1 0" color="black"></a-plane>
+      <a-plane rotation="0 0 90" width="1" height="1" position="0 -0.5 -0.5" color="white"></a-plane>
+      <a-plane rotation="0 90 0" width="1" height="1" position="-0.5 -0.5 0" color="white"></a-plane>
+      <a-plane rotation="0 180 90" width="1" height="1" position="0 -0.5 0.5" color="white"></a-plane>
+      <a-plane rotation="0 270 0" width="1" height="1" position="0.5 -0.5 0" color="white" material="colorWrite: false"></a-plane> -->
     </a-marker>
     <a-entity camera></a-entity>
   </a-scene>

@@ -35,6 +35,12 @@
       <a-plane rotation="0 180 90" width="1" height="1" position="0 -0.5 0.5" color="white"></a-plane>
       <a-plane rotation="0 270 0" width="1" height="1" position="0.5 -0.5 0" color="white" material="colorWrite: false"></a-plane> -->
     </a-marker>
+    <a-assets>
+      <a-asset-item id="robot" src="robot-hip-hop-dance.gltf"></a-asset-item>
+    </a-assets>
+    <a-marker type="barcode" value="0">
+      <a-entity gltf-model="#robot" modify-materials scale="0.25 0.25 0.25"></a-entity>
+    </a-marker>
     <a-entity camera></a-entity>
   </a-scene>
 </body>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Lean into the future</title>
+  <script src="https://aframe.io/releases/0.9.2/aframe.min.js"></script>
+  <script src="js/ar.js.02.07.js"></script>
+  <script src="https://fariskassim.com/stage/rebel9/teaf/blob/v4/js/perlin.js"></script>
+  <script src="js/blob.js"></script>
+</head>
+<body style="margin : 0px; overflow: hidden;">
+    <a-scene embedded arjs="detectionMode: mono_and_matrix; matrixCodeType: 3x3; debugUIEnabled: false;" vr-mode-ui="enabled: false">
+        <a-marker type="barcode" value="12">
+        <a-marker type="area">
+            <a-entity blob="width: 1; height: 128; depth: 128; color: #fff; speed: 0.001; spikes: 1.5" scale="0.5 0.5 0.5" position="0 0.5 0"></a-entity>
+            <a-entity id="magentaLight" light="type: point; intensity: 0.77; color: #f207ff;" position="7.67543 13.16473 -8.83224" visible=""></a-entity>
+            <a-entity id="cyanLight" light="type: point; intensity: 0.5; color: #00fff3" position="-7.95295 12.79505 5.71929" visible=""></a-entity>
+            <a-entity id="blueLight" light="type: point; intensity: 0.88; color: #0016ff;" position="7.39931 9.36727 6.97164" visible=""></a-entity>
+            <a-entity id="greenLight" light="type: point; intensity: 0.44; color: #01ff00" position="-8.85877 9.16498 -6.58576" visible=""></a-entity>
+            <a-entity id="border"
+                line__one="start: -0.5 0 -0.5; end: -0.5 0 0.5; color: #0EEE56"
+                line__two="start: -0.5 0 0.5; end: 0.5 0 0.5; color: #0EEE56"
+                line__three="start: 0.5 0 0.5; end: 0.5 0 -0.5; color: #0EEE56"
+                line__four="start: 0.5 0 -0.5; end: -0.5 0 -0.5; color: #0EEE56"
+            ></a-entity>
+        </a-marker>
+    <a-entity camera></a-entity>
+  </a-scene>
+</body>
+</html>
+

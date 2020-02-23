@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Lean into the future</title>
+  <script src="https://aframe.io/releases/0.9.2/aframe.min.js"></script>
+  <!-- <script src="https://raw.githack.com/jeromeetienne/AR.js/2.1.4/aframe/build/aframe-ar.js"></script> -->
+  <script src="js/ar.js.02.07.js"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.0.0/dist/aframe-extras.min.js"></script> -->
+  <script src="https://fariskassim.com/stage/rebel9/teaf/blob/v4/js/perlin.js"></script>
+  <script src="js/blob.js"></script>
+  <script>
+    // link to the learner url - 
+    ARjs.AnchorDebugUI.MarkersAreaLearnerURL = "learner.html"
+    // UNCOMMENT TO SEE THE LOCALSTORAGE FILE DATA
+    // console.log(localStorage.getItem('ARjsMultiMarkerFile'))
+  </script>
+</head>
+<body style="margin : 0px; overflow: hidden;">
+  <a-scene embedded arjs='sourceType: webcam; debugUIEnabled: true'>
+      <a-marker type="area">
+          <a-entity id="border"
+            line__one="start: -0.5 0 -0.5; end: -0.5 0 0.5; color: #0EEE56"
+            line__two="start: -0.5 0 0.5; end: 0.5 0 0.5; color: #0EEE56"
+            line__three="start: 0.5 0 0.5; end: 0.5 0 -0.5; color: #0EEE56"
+            line__four="start: 0.5 0 -0.5; end: -0.5 0 -0.5; color: #0EEE56"
+        ></a-entity>
+      <a-text value="Lean" position="-0.5 0 -0.5" rotation="-90 0 0"></a-text>
+      <a-text value="into" position="0.5 0 -0.5" rotation="-90 0 0"></a-text>
+      <a-text value="the" position="-0.5 0 0.5" rotation="-90 0 0"></a-text>
+      <a-text value="future" position="0.5 0 0.5" rotation="-90 0 0"></a-text>
+      <a-plane rotation="-90 0 0" width="1" height="1" position="0 -1 0" color="black"></a-plane>
+      <a-plane rotation="0 0 90" width="1" height="1" position="0 -0.5 -0.5" color="white"></a-plane>
+      <a-plane rotation="0 90 0" width="1" height="1" position="-0.5 -0.5 0" color="white"></a-plane>
+      <a-plane rotation="0 180 90" width="1" height="1" position="0 -0.5 0.5" color="white"></a-plane>
+      <a-plane rotation="0 270 0" width="1" height="1" position="0.5 -0.5 0" color="white" material="colorWrite: false"></a-plane>
+    </a-marker>
+    <a-entity camera></a-entity>
+  </a-scene>
+</body>
+</html>
+

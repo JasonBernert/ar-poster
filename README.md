@@ -3,11 +3,12 @@ This augmented reality print poster uses [A-Frame](https://aframe.io/) to create
 
 ## Development
 
-`npm start` spins up an HTTPS server with browsersync. 
-
-- HTTPS is important. Most browsers don't allow camera access over HTTP.
+1. `npm start` spins up an HTTPS server with browsersync. HTTPS is important. Most browsers don't allow camera access over HTTP.
+2. `control` + `option` + `i` while running the server opens [inspector](https://github.com/aframevr/aframe-inspector).
+3. [aframe-watcher](https://github.com/supermedium/aframe-watcher) runs in the background to save any changes from inspector.
+4. Test locally on your phone by going to the external address provided in the console and pointing your phone to the poster.
 
 ## Poster
 
-![](./images/future.jpg)
+![Lean into the future](./images/future.jpg)
 

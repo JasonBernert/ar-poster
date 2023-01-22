@@ -22,6 +22,7 @@ AFRAME.registerComponent('blob', {
   tick: function (time) {
     const spikes = this.data.spikes;
     const speed = this.data.speed;
+    
     for (let i = 0; i < this.geometry.vertices.length; i++) {
       const p = this.geometry.vertices[i];
       p

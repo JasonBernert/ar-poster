@@ -6,9 +6,5 @@
   "description": "Augmented reality print poster with A-Frame",
   "scripts": {
     "start": "browser-sync start --server --files --https & aframe-watcher index.html"
-  },
-  "devDependencies": {
-    "aframe-watcher": "^1.4.0",
-    "browser-sync": "^2.27.11"
   }
 }

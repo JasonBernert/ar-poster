@@ -7,7 +7,7 @@
   "scripts": {
     "start": "browser-sync start --server --files --https & aframe-watcher index.html"
   },
-  "dependencies": {
+  "devDependencies": {
     "aframe-watcher": "^1.4.0",
     "browser-sync": "^2.27.11"
   }

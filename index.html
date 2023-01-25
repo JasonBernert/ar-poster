@@ -7,7 +7,7 @@
     <script src="https://aframe.io/releases/0.9.2/aframe.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.0/dist/mindar-image-aframe.prod.js"></script>
     <script src="https://fariskassim.com/stage/rebel9/teaf/blob/v4/js/perlin.js"></script>
-    <script src="./blob.js"></script>
+    <script src="./lean-into-the-future/blob.js"></script>
     <!-- <style>
       .mindar-ui-overlay {
         visibility: hidden;
@@ -15,7 +15,7 @@
     </style> -->
   </head>
   <body>
-    <a-scene mindar-image="imageTargetSrc: ./targets.mind;" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
+    <a-scene mindar-image="imageTargetSrc: ./lean-into-the-future/targets.mind;" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
       <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
       <a-entity mindar-image-target="targetIndex: 0">
         <a-entity id="blob" blob="width: 1; height: 128; depth: 128; color: #fff; speed: 0.001; spikes: 1.5" scale="0.3 0.3 0.3" position="0 0 -0.15"></a-entity>

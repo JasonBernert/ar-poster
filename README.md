@@ -10,5 +10,5 @@ This augmented reality print poster uses [A-Frame](https://aframe.io/) to create
 
 ## Poster
 
-![Lean into the future](./images/future.jpg)
+![Lean into the future](./lean-into-the-future/future.jpg)
 

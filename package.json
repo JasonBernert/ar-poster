@@ -5,7 +5,7 @@
   "license": "ISC",
   "description": "Augmented reality print poster with A-Frame",
   "scripts": {
-    "start": "browser-sync start --server --files --https & aframe-watcher index.html"
+    "start": "browser-sync start --server --files --https --startPath ./lean-into-the-future/index.html & aframe-watcher ./lean-into-the-future/index.html"
   },
   "dependencies": {
     "aframe-watcher": "^1.4.0",
